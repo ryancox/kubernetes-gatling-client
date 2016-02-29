@@ -1,0 +1,1 @@
+# kubernetes-gatling-client
