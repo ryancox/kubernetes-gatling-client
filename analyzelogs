@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+mkdir /rawlogs
+gsutil cp gs://$BUCKET_RAWLOGS/* /rawlogs
+./bin/gatling.sh --reports-only /rawlogs
+find results -name "*-*" -d 1 -exec cp {}/* $BUCKET_REPORT \;

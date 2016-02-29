@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+./bin/gatling.sh --simulations-folder /simulations --simulation $SIMULATION --no-reports
+find results -name simulation.log -exec gsutil cp {} gs://$BUCKET_RAWLOGS/$HOSTNAME.log \;
