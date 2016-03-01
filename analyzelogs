@@ -3,4 +3,4 @@ mkdir /rawlogs
 gsutil cp gs://$BUCKET_RAWLOGS/* /rawlogs
 ./bin/gatling.sh --reports-only /rawlogs 
 rm /rawlogs/*.log
-gsutil cp -r /report gs://$BUCKET_REPORT
+gsutil cp -r /rawlogs gs://$BUCKET_REPORT
