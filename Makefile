@@ -1,6 +1,6 @@
 USER=ryancox
 REPO=gatling-k8s-client
-VERSION=1.0.0
+VERSION=1.0.2
 TAG=$(USER)/$(REPO):$(VERSION)
 
 clean:
