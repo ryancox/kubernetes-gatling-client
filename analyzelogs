@@ -2,4 +2,4 @@
 mkdir /rawlogs
 gsutil cp gs://$BUCKET_RAWLOGS/* /rawlogs
 ./bin/gatling.sh --reports-only /rawlogs
-find results -name "*-*" -d 1 -exec cp {}/* $BUCKET_REPORT \;
+find results -d 1 -exec gsutil cp {}/* gs://$BUCKET_REPORT \;
